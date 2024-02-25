@@ -1,0 +1,218 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+.main-btn:hover {
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+}
+.main-btn:active {
+  color: var(--yellow-color) !important;
+  border-color: var(--yellow-color) !important;
+}
+.main-title::after {
+  content: "";
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-title img {
+  border: none !important;
+}
+
+.navbar {
+  background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color);
+}
+.navbar .search {
+  color: var(--green-color);
+  border-left: 1px solid var(--green-color);
+}
+.navbar .navbar-toggler {
+  color: white;
+  border-color: white;
+  font-size: 25px;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.landing {
+  background-color: var(--dark-color);
+  height: calc(100vh - 72px);
+}
+
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+.potfolio {
+  background-color: var(--section-color);
+}
+.potfolio .row .box {
+  position: relative;
+  overflow: hidden;
+  border: 5px solid white;
+}
+.potfolio .row .box::after {
+  content: "Application";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 27px;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #33d1ccc4;
+  transition: 0.4s;
+}
+.potfolio .row .box:hover::after {
+  left: 0;
+}
+.potfolio img {
+  max-width: 100%;
+}
+.potfolio .buttons button:not(:first-child) {
+  border: none;
+}
+.potfolio .buttons button:not(:first-child):hover {
+  color: var(--red-color);
+}
+
+.stuff .container > p.first {
+  max-width: 500px;
+}
+@media (max-width: 767px) {
+  .stuff .row div:first-child {
+    text-align: center;
+  }
+}
+.stuff .meet {
+  background-color: var(--section-color);
+}
+.stuff .meet h2 {
+  color: var(--yellow-color);
+}
+.stuff .meet .box h4 {
+  background-color: var(--green-color);
+  color: white;
+}
+.stuff .meet .box p {
+  background-color: white;
+}
+
+.start {
+  background-color: var(--dark-color);
+}
+
+.newsletter {
+  background-color: var(--yellow-color);
+}
+.newsletter input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  outline: none;
+  padding: 5px;
+}
+.newsletter button {
+  background-color: var(--dark-color);
+  width: fit-content;
+  color: var(--yellow-color);
+  margin-left: 30px;
+}
+@media (max-width: 767px) {
+  .newsletter {
+    text-align: center;
+  }
+  .newsletter button {
+    margin: auto;
+  }
+}
+
+footer {
+  background-color: var(--dark-color);
+  padding: 3rem 0;
+}
+footer a {
+  display: block;
+  margin-bottom: 7px;
+}
+footer p:nth-of-type(2) span {
+  color: var(--green-color);
+}
+footer p:nth-of-type(3) span {
+  color: var(--yellow-color);
+}
+footer button {
+  width: 100%;
+  margin-bottom: 20px;
+}
+footer .icons .icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+footer .icons .icon:first-of-type {
+  background-color: #1877f2;
+}
+footer .icons .icon:nth-of-type(2) {
+  background-color: #1da1f2;
+}
+footer .icons .icon:nth-of-type(3) {
+  background-color: #0077b5;
+}
+footer .icons .icon:last-of-type {
+  background-color: #ff0000;
+}
+@media (max-width: 992px) {
+  footer {
+    text-align: center;
+  }
+}
